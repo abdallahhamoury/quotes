@@ -8,16 +8,30 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Random;
 
 class AppTest {
-    @Test void testJsonFileObject(){
+    @Test void TestJsonFileObject(){
         ArrayList<Quote> quotes= new ArrayList<>();
         try {
-            FileReader jsonFile = new FileReader("Abdallah.json");
-            quotes = App.dataJsonR(jsonFile);
+
+            FileReader fileReader = new FileReader("src/test/resources/Abdallah.json");
+            quotes = App.dataJsonR(fileReader);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        assertEquals("George Orwell",quotes.get(2).getAuthor());
+        Random random = new Random();
+        int randomBookQuotes = random.nextInt(quotes.size());
+        String expected =("Quote{" +
+                " author='" +  quotes.get(randomBookQuotes).getAuthor() + '\'' +
+                ", likes=" + quotes.get(randomBookQuotes).getLikes() +
+                ", text='" + quotes.get(randomBookQuotes).getText() + '\'' +
+                '}');
+
+
+
+        assertEquals(expected,quotes.get(randomBookQuotes).toString());
     }
+
 }
+
