@@ -12,6 +12,11 @@ public class QuoteHttp {
         this.quoteLink = quoteLink;
     }
 
+
+    public QuoteHttp() {
+
+    }
+
     public String getQuoteText() {
         return quoteText;
     }
@@ -34,5 +39,14 @@ public class QuoteHttp {
 
     public void setQuoteLink(String quoteLink) {
         this.quoteLink = quoteLink;
+    }
+
+    @Override
+    public String toString() {
+        return "QuoteHttp{" +
+                "quoteText='" + quoteText + '\'' +
+                ", quoteAuthor='" + quoteAuthor + '\'' +
+                ", quoteLink='" + quoteLink + '\'' +
+                "}";
     }
 }
