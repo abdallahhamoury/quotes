@@ -92,7 +92,7 @@ public class App {
 
     }
 
-    static HttpURLConnection setUpConnectionObject(URL url) throws IOException {
+    public static HttpURLConnection setUpConnectionObject(URL url) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         int responseCode = 0;
         try {

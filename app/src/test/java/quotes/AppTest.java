@@ -55,9 +55,10 @@ class AppTest {
     @Test void TestConnection() throws IOException {
         String ApiUrl = " http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
         URL url= new URL(ApiUrl);
-
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        assertEquals(200,connection.getResponseCode());
+        int responseCode = 0;
+        responseCode = connection.getResponseCode();//200 Ok Crate
+        assertEquals(200,responseCode);
     }
     @Test void QuoteHttpConstructor(){
         QuoteHttp quotes = new QuoteHttp("By accepting yourself and being fully what you are," +
