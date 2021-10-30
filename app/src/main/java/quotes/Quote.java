@@ -3,11 +3,9 @@ package quotes;
 import java.util.ArrayList;
 
 public class Quote {
-    private ArrayList<String> tags;
-    private String author;
-    private String likes;
-    private String text;
-
+    String author;
+    String likes;
+    String text;
 
     public Quote(String author, String likes, String text) {
         this.author = author;

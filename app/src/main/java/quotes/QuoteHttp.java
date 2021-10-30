@@ -1,9 +1,9 @@
 package quotes;
 
 public class QuoteHttp {
-   private String quoteText;
-   private String quoteAuthor;
-   private String quoteLink;
+    String quoteText;
+    String quoteAuthor;
+    String quoteLink;
 
 
     public QuoteHttp(String quoteText, String quoteAuthor, String quoteLink) {
@@ -49,4 +49,5 @@ public class QuoteHttp {
                 ", quoteLink='" + quoteLink + '\'' +
                 "}";
     }
+
 }
