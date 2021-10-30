@@ -1,21 +1,10 @@
-## Lab 8 - OO Design and GSON
 
-**To use code Create Gson object using GsonBuilder.
-Create a Gson object.
-Tt is a reusable object Use fromJson() method to get the Object from the JSON Serialize Object to JSON.
-Use toJson() method to get the JSON string representation of an object you have to download implementation 'com.google.code.gson:gson:2.8.8'**
 
-The partners:
-Dima Zeklam : created the TestJsonFileObject() method for testing .
-Abdallah Hamoury : created the BookQuotes class.
+repo covers how Use the file recentquotes.json to show random popular book quotes.
+Lab: 08 - OO Design and GSON [README Link](labs/READMELAB8.md)
 
-And we solved together the main function and write the dataJsonR method .
+Use the file recentquotes.json to show random popular book quotes. Your program should use GSON to parse the .json file. The app needs no functionality other than showing the quote and the author when it is run. The app should choose one quote each time it is run.
+Lab: 09 - Web requests [README link](labs/README9.md)
+We do still have this quotes file,
+though, and it might still be useful! Ensure that if your app has errors in connecting to the Internet, you instead display a random quote from your file. When we grab a random quote from the Internet, we could add it to our file of quotes, for use if the app goes offline in the future. Add that functionality: when a quote comes back from a request, it’s also cached in the json file.
 
-## Lab 9 -  Web requests
-
-This application will return the random quote from the Api .
-first need to make connection with the URL using HttpURLConnection,
-the Java HttpURLConnection class is http specific URLConnection,
-you can retrieve information of any HTTP URL such as header information, status code, response code etc.
-if there is a connection with the internet will return a random quote and will create a file to write this quote in it.
-If the app goes offline the app will return the random quote from the file that was created that is included lines of quotes
